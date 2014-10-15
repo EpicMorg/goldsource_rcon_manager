@@ -32,8 +32,8 @@
             this.txtServerIP = new System.Windows.Forms.TextBox();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.txtServerPort = new System.Windows.Forms.TextBox();
-            this.txtResponse = new System.Windows.Forms.TextBox();
             this.btnAbout = new System.Windows.Forms.Button();
+            this.txtResponse = new System.Windows.Forms.RichTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pic_btn_min)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_btn_max)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_btn_exit)).BeginInit();
@@ -129,6 +129,7 @@
             this.txtServerIP.Name = "txtServerIP";
             this.txtServerIP.Size = new System.Drawing.Size(172, 20);
             this.txtServerIP.TabIndex = 0;
+            this.txtServerIP.Text = "game.stargate-vk.tk";
             // 
             // txtPassword
             // 
@@ -139,6 +140,7 @@
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(156, 20);
             this.txtPassword.TabIndex = 2;
+            this.txtPassword.Text = "O5cMXDtMz79KQ1.-BB\"P6W2eAzSGWp";
             // 
             // txtServerPort
             // 
@@ -149,21 +151,7 @@
             this.txtServerPort.Name = "txtServerPort";
             this.txtServerPort.Size = new System.Drawing.Size(102, 20);
             this.txtServerPort.TabIndex = 1;
-            // 
-            // txtResponse
-            // 
-            this.txtResponse.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtResponse.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(70)))), ((int)(((byte)(55)))));
-            this.txtResponse.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtResponse.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(145)))), ((int)(((byte)(128)))));
-            this.txtResponse.Location = new System.Drawing.Point(12, 84);
-            this.txtResponse.Multiline = true;
-            this.txtResponse.Name = "txtResponse";
-            this.txtResponse.ReadOnly = true;
-            this.txtResponse.Size = new System.Drawing.Size(442, 232);
-            this.txtResponse.TabIndex = 99;
+            this.txtServerPort.Text = "27018";
             // 
             // btnAbout
             // 
@@ -174,14 +162,27 @@
             this.btnAbout.UseVisualStyleBackColor = true;
             this.btnAbout.Click += new System.EventHandler(this.btnAbout_Click);
             // 
+            // txtResponse
+            // 
+            this.txtResponse.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtResponse.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(70)))), ((int)(((byte)(55)))));
+            this.txtResponse.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(145)))), ((int)(((byte)(128)))));
+            this.txtResponse.Location = new System.Drawing.Point(12, 84);
+            this.txtResponse.Name = "txtResponse";
+            this.txtResponse.Size = new System.Drawing.Size(442, 232);
+            this.txtResponse.TabIndex = 101;
+            this.txtResponse.Text = "";
+            // 
             // frm_main
             // 
             this.AcceptButton = this.btnSend;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(466, 357);
-            this.Controls.Add(this.btnAbout);
             this.Controls.Add(this.txtResponse);
+            this.Controls.Add(this.btnAbout);
             this.Controls.Add(this.txtServerPort);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.txtServerIP);
@@ -203,13 +204,13 @@
             this.Controls.SetChildIndex(this.txtServerIP, 0);
             this.Controls.SetChildIndex(this.txtPassword, 0);
             this.Controls.SetChildIndex(this.txtServerPort, 0);
-            this.Controls.SetChildIndex(this.txtResponse, 0);
             this.Controls.SetChildIndex(this.lbl_title, 0);
             this.Controls.SetChildIndex(this.pic_logo, 0);
             this.Controls.SetChildIndex(this.pic_btn_min, 0);
             this.Controls.SetChildIndex(this.pic_btn_exit, 0);
             this.Controls.SetChildIndex(this.pic_btn_max, 0);
             this.Controls.SetChildIndex(this.btnAbout, 0);
+            this.Controls.SetChildIndex(this.txtResponse, 0);
             ((System.ComponentModel.ISupportInitialize)(this.pic_btn_min)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_btn_max)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_btn_exit)).EndInit();
@@ -230,8 +231,9 @@
         private System.Windows.Forms.TextBox txtServerIP;
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.TextBox txtServerPort;
-        private System.Windows.Forms.TextBox txtResponse;
+     
         private System.Windows.Forms.Button btnAbout;
+        private System.Windows.Forms.RichTextBox txtResponse;
     }
 }
 

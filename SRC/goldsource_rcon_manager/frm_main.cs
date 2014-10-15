@@ -14,18 +14,20 @@ namespace goldsource_rcon_manager {
         }
 
         private void btnSend_Click(object sender, EventArgs e) {
-            RCON cs = new RCON();
+            var cs = new Rcon();
+            var pass = txtPassword.Text;
+            var iptext = txtServerIP.Text;
+            var portt = txtServerPort.Text;
             this.txtResponse.Text = ""; 
+
             try {
-                if (txtPassword.Text == ""
-                    || txtServerIP.Text == ""
-                    || txtServerPort.Text == "") {
+                if (pass == ""
+                    || iptext == ""
+                    || portt == "") {
                         MessageBox.Show("Please fill out the loginform completely!", "Error:", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
                 else {
-                       this.txtResponse.Text = cs.sendRCON(
-                    this.txtServerIP.Text, int.Parse(this.txtServerPort.Text),
-                    this.txtPassword.Text, this.txtCommand.Text).Replace("\n", "\r\n");
+                       this.txtResponse.Text = cs.SendRcon(iptext, int.Parse(portt), pass, this.txtCommand.Text).Replace("\n", "\r\n");
                 }
               
             }
